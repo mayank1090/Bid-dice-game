@@ -12,7 +12,7 @@ function App() {
   const [gamefinished, setgamefinish] = useState(false);
 
   useEffect(() => {
-    if (player1score > 19 || player2score > 19) {
+    if (player1score > 99|| player2score > 99) {
       document.querySelector(".winnerhead").classList.remove("hidden");
       setgamefinish(true);
       document.querySelector(".dice").classList.toggle("hidden");
@@ -84,7 +84,7 @@ function App() {
     document.querySelector(".player--0").classList.add("player--active");
   };
 
-  const winnertext = player1score >= 20 ? "Player 1 winner" : "Player 2 winner";
+  const winnertext = player1score >= 100 ? "Player 1 winner" : "Player 2 winner";
 
   return (
     <main>
